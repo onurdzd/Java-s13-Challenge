@@ -1,5 +1,8 @@
 package employeeApp;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Uygulamanın amacı Java'da nesne tabanlı programlamanın temellerinin oluşturulmasıdır.
  *
@@ -12,7 +15,21 @@ public class Main
      */
     private static void workWithData ()
     {
+        Healthplan healthplan1=new Healthplan(1,"sigorta 1",Healthplan.Plan.BASIC);
+        System.out.println(healthplan1);
+        System.out.println(healthplan1.getPlan());
+        System.out.println("//////");
 
+        Employee employee1=new Employee(1,"onur","onur@gmail","asdasd");
+        System.out.println(employee1);
+        employee1.addHealthplan(1,"sgk");
+        System.out.println(employee1);
+        System.out.println("//////");
+
+        Company company1=new Company(1,"intel",100,new String[3]);
+        System.out.println(company1);
+        company1.addEmployee(0,"mehmet");
+        System.out.println(company1);
     }
 
     /**
